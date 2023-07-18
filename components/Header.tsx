@@ -35,16 +35,16 @@ const Header = () => {
             <li className="close" onClick={menuDeactiveHandler}>
               X
             </li>
-            <li>
+            <li onClick={menuDeactiveHandler}>
               <Link href="/">Home</Link>
             </li>
-            <li>
+            <li onClick={menuDeactiveHandler}>
               <a href="#market">Market</a>
             </li>
-            <li>
+            <li onClick={menuDeactiveHandler}>
               <a href="#chooseUs">Choose Us</a>
             </li>
-            <li>
+            <li onClick={menuDeactiveHandler}>
               <a href="#join">Join</a>
             </li>
           </ul>
