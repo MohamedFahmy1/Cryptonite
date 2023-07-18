@@ -1,0 +1,117 @@
+@use "../helpers/" as *;
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+  background-color: transparent;
+  color: white;
+  padding: 30px;
+  transition: all $main-transition;
+  &.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: $section-color;
+  }
+  & .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    & .logo {
+      background: $main-color;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      -webkit-background-clip: text;
+      text-transform: uppercase;
+      font-size: 30px;
+      font-weight: 700;
+      @include average-screen {
+        font-size: 22px;
+      }
+    }
+    & nav {
+      & .links {
+        display: flex;
+        gap: 35px;
+        @include mobile {
+          position: absolute;
+          top: 0;
+          left: -110%;
+          height: 100vh;
+          width: 100vw;
+          background-color: white;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          transition: $main-transition;
+          &.active {
+            left: 0;
+          }
+        }
+        & li {
+          &.close {
+            display: none;
+            @include mobile {
+              font-size: 30px;
+              display: block;
+              color: black;
+              position: absolute;
+              cursor: pointer;
+              top: 20px;
+              right: 40px;
+              font-weight: bold;
+            }
+          }
+          & a {
+            color: white;
+            font-weight: 700;
+            font-size: 20px;
+            display: block;
+            @include mobile {
+              color: black;
+              font-size: 30px;
+            }
+          }
+          &:hover {
+            & a {
+              @include specialColor;
+            }
+          }
+        }
+      }
+    }
+    & .social {
+      display: flex;
+      gap: 20px;
+
+      & li {
+        & .menu {
+          display: none;
+          @include mobile {
+            display: block;
+            font-size: 26px;
+            font-weight: 700;
+            cursor: pointer;
+            &:hover {
+              color: #7700f6;
+            }
+          }
+        }
+        & .icon {
+          height: 20px;
+          @include mobile {
+            display: none;
+          }
+          cursor: pointer;
+          transition: $main-transition;
+          &:hover {
+            color: #7700f6;
+          }
+        }
+      }
+    }
+  }
+}

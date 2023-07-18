@@ -1,0 +1,1103 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+::-webkit-scrollbar {
+  width: 18px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f6f6f6;
+  box-shadow: 0 0 10px #ddd inset;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #7700f6;
+  border-radius: 30px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: linear-gradient(25deg, #2600fc, #ff00ea);
+}
+
+button.scroll {
+  padding: 10px;
+  background-color: linear-gradient(25deg, #2600fc, #ff00ea);
+  position: fixed;
+  bottom: 25px;
+  right: -50px;
+  border-radius: 4px;
+  border: none;
+  z-index: 9999;
+  cursor: pointer;
+  color: white;
+  font-size: 20px;
+  transition: 0.3s;
+}
+button.scroll.active {
+  right: 20px;
+}
+
+.loader {
+  margin: 10rem auto;
+  width: 64px;
+  height: 64px;
+  position: relative;
+  background-image: linear-gradient(#fff 16px, transparent 0), linear-gradient(#ff00ea 16px, transparent 0), linear-gradient(#ff00ea 16px, transparent 0), linear-gradient(#fff 16px, transparent 0);
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+  background-position: left top, left bottom, right top, right bottom;
+  animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    width: 64px;
+    height: 64px;
+    transform: rotate(0deg);
+  }
+  50% {
+    width: 30px;
+    height: 30px;
+    transform: rotate(180deg);
+  }
+  100% {
+    width: 64px;
+    height: 64px;
+    transform: rotate(360deg);
+  }
+}
+.loadingPage {
+  height: 100vh;
+  width: 100vw;
+  background-color: #0f051d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input { /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select { /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type=search] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+  display: none;
+}
+
+/* Start Global Rules */
+body {
+  font-family: "Space Grotesk", sans-serif;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* End Global Rules */
+.coinPage {
+  background-image: linear-gradient(to top, #0f051d 30%, #130749 70%);
+  width: 100%;
+  height: 100vh;
+}
+@media (max-width: 1000px) {
+  .coinPage {
+    height: 150vh;
+  }
+}
+
+.coin-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+@media (max-width: 1000px) {
+  .coin-content {
+    flex-direction: column;
+    padding-top: 100px;
+  }
+}
+.coin-content__img-side {
+  width: 30%;
+  border-right: 2px solid white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.coin-content__img-side .close {
+  color: white;
+  position: absolute;
+  font-weight: bold;
+  right: 10px;
+  top: 150px;
+  font-size: 28px;
+  display: block;
+  background: linear-gradient(25deg, #2600fc, #ff00ea);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+.coin-content__img-side .close:hover {
+  -webkit-text-fill-color: white;
+}
+@media (max-width: 1000px) {
+  .coin-content__img-side {
+    width: 90%;
+  }
+}
+@media (max-width: 1000px) {
+  .coin-content__img-side {
+    border-bottom: 2px solid white;
+    border-right: none;
+    padding-bottom: 15px;
+  }
+}
+.coin-content__img-side h2 {
+  font-size: 33px;
+  margin: 20px 0 10px;
+}
+.coin-content__img-side p {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 10px 0;
+}
+.coin-content__img-side img {
+  width: 200px;
+  height: 200px;
+}
+.coin-content__text-side {
+  width: 70%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media (max-width: 1000px) {
+  .coin-content__text-side {
+    width: 100%;
+    padding: 20px 10px;
+  }
+}
+.coin-content__text-side__24h, .coin-content__text-side__current, .coin-content__text-side__symbol {
+  display: flex;
+  font-size: 20px;
+  gap: 20px;
+  justify-content: center;
+  white-space: nowrap;
+}
+.coin-content__text-side__24h p, .coin-content__text-side__current p, .coin-content__text-side__symbol p {
+  margin: 0;
+}
+.coin-content__text-side__24h p.green, .coin-content__text-side__current p.green, .coin-content__text-side__symbol p.green {
+  color: #0ecb81;
+}
+.coin-content__text-side__24h p.red, .coin-content__text-side__current p.red, .coin-content__text-side__symbol p.red {
+  color: red;
+}
+.coin-content__text-side__24h p span, .coin-content__text-side__current p span, .coin-content__text-side__symbol p span {
+  color: white;
+  text-transform: uppercase;
+}
+
+.numb {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+@media (max-width: 1000px) {
+  .numb {
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+}
+
+.description {
+  width: 100%;
+  font-size: 20px;
+  height: 300px;
+  overflow-y: auto;
+  margin-top: 30px;
+  text-align: left;
+}
+.description a {
+  color: #0ecb81;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+  background-color: transparent;
+  color: white;
+  padding: 30px;
+  transition: all 0.3s;
+}
+header.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #0f051d;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .container .logo {
+  background: linear-gradient(25deg, #2600fc, #ff00ea);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: 700;
+}
+@media (max-width: 991px) {
+  header .container .logo {
+    font-size: 22px;
+  }
+}
+header .container nav .links {
+  display: flex;
+  gap: 35px;
+}
+@media (max-width: 767px) {
+  header .container nav .links {
+    position: absolute;
+    top: 0;
+    left: -110%;
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+  }
+  header .container nav .links.active {
+    left: 0;
+  }
+}
+header .container nav .links li.close {
+  display: none;
+}
+@media (max-width: 767px) {
+  header .container nav .links li.close {
+    font-size: 30px;
+    display: block;
+    color: black;
+    position: absolute;
+    cursor: pointer;
+    top: 20px;
+    right: 40px;
+    font-weight: bold;
+  }
+}
+header .container nav .links li a {
+  color: white;
+  font-weight: 700;
+  font-size: 20px;
+  display: block;
+}
+@media (max-width: 767px) {
+  header .container nav .links li a {
+    color: black;
+    font-size: 30px;
+  }
+}
+header .container nav .links li:hover a {
+  background: linear-gradient(25deg, #2600fc, #ff00ea);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+header .container .social {
+  display: flex;
+  gap: 20px;
+}
+header .container .social li .menu {
+  display: none;
+}
+@media (max-width: 767px) {
+  header .container .social li .menu {
+    display: block;
+    font-size: 26px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  header .container .social li .menu:hover {
+    color: #7700f6;
+  }
+}
+header .container .social li .icon {
+  height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+@media (max-width: 767px) {
+  header .container .social li .icon {
+    display: none;
+  }
+}
+header .container .social li .icon:hover {
+  color: #7700f6;
+}
+
+.landing {
+  background-image: linear-gradient(0deg, #0f051d 30%, #130749 70%);
+  height: 100vh;
+  width: 100%;
+}
+.landing .text {
+  position: relative;
+}
+.landing .text .bitcoin {
+  position: absolute;
+  height: 71px;
+  width: 71px;
+  left: -20px;
+  top: 350px;
+  animation: bouncing 3s infinite;
+}
+@media (max-width: 991px) {
+  .landing .text .bitcoin {
+    display: none;
+  }
+}
+.landing .text .ether {
+  position: absolute;
+  height: 71px;
+  width: 71px;
+  top: 350px;
+  right: -23px;
+  animation: bouncing 3s infinite;
+}
+@media (max-width: 991px) {
+  .landing .text .ether {
+    display: none;
+  }
+}
+@keyframes bouncing {
+  0% {
+    top: 350px;
+  }
+  50% {
+    top: 310px;
+  }
+  100% {
+    top: 350px;
+  }
+}
+.landing .text h1 {
+  margin: 0;
+  padding-top: 180px;
+  font-size: 100px;
+  color: white;
+  text-align: center;
+}
+@media (max-width: 991px) {
+  .landing .text h1 {
+    font-size: 67.5px;
+  }
+}
+@media (max-width: 767px) {
+  .landing .text h1 {
+    font-size: 52.5px;
+  }
+}
+.landing .text h1 span {
+  background: linear-gradient(25deg, #2600fc, #ff00ea);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+.landing .coins {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  color: white;
+  padding-top: 60px;
+  row-gap: 40px;
+  height: auto;
+  user-select: none;
+}
+.landing .coins .coin {
+  text-align: center;
+  display: block;
+  color: white;
+}
+@media (max-width: 767px) {
+  .landing .coins .coin {
+    flex-basis: 50%;
+  }
+}
+.landing .coins .coin p {
+  font-size: 22px;
+  margin: 10px 0;
+  font-weight: bold;
+}
+.landing .coins .coin p span {
+  display: inline-block;
+  margin-left: 7px;
+}
+.landing .coins .coin p span.red {
+  color: red;
+}
+.landing .coins .coin p span.green {
+  color: #0ecb81;
+}
+
+.market {
+  background-color: #0f051d;
+  padding: 100px 0;
+}
+.market .market-content {
+  display: flex;
+  flex-direction: column;
+}
+.market .market-content h2 {
+  color: white;
+  font-size: 45px;
+  margin-bottom: 30px;
+}
+@media (max-width: 430px) {
+  .market .market-content h2 {
+    font-size: 35px;
+  }
+}
+.market .market-content__coin-list {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+.market .market-content__coin-list__top {
+  display: grid;
+  grid-template-columns: 16fr 25fr 25fr 25fr;
+  color: white;
+  font-size: 20px;
+  padding: 15px;
+  text-align: right;
+  font-weight: 500;
+  background: linear-gradient(25deg, rgb(38, 0, 252), rgb(255, 0, 234));
+  border-radius: 8px 8px 0 0;
+  gap: 20px;
+}
+@media (max-width: 800px) {
+  .market .market-content__coin-list__top {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.market .market-content__coin-list__top p {
+  margin: 5px 0;
+}
+@media (max-width: 800px) {
+  .market .market-content__coin-list__top p {
+    width: 180px;
+    text-align: center;
+  }
+}
+@media (max-width: 700px) {
+  .market .market-content__coin-list__top {
+    width: fit-content;
+  }
+}
+.market .market-content__coin-list__top p:first-child {
+  text-align: left;
+}
+.market .market-content__coin-list__row {
+  display: flex;
+  flex-direction: column;
+}
+.market .market-content__coin-list__pagination {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+.market .market-content__coin-list__pagination button {
+  font-size: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: white;
+}
+.market .market-content .activePagi {
+  background: linear-gradient(25deg, rgb(38, 0, 252), rgb(255, 0, 234));
+  color: white;
+}
+.market .market-content .coin-row {
+  display: grid;
+  grid-template-columns: 16fr 25fr 25fr 25fr;
+  color: white;
+  font-size: 20px;
+  padding: 25px 15px;
+  text-align: right;
+  font-weight: 500;
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid white;
+  align-items: center;
+  gap: 20px;
+  background-color: black;
+  user-select: none;
+}
+.market .market-content .coin-row:hover {
+  background-color: #200840;
+  cursor: pointer;
+}
+@media (max-width: 700px) {
+  .market .market-content .coin-row {
+    width: fit-content;
+  }
+}
+@media (max-width: 800px) {
+  .market .market-content .coin-row p:last-child {
+    width: 230px;
+  }
+}
+@media (max-width: 800px) {
+  .market .market-content .coin-row p {
+    width: 150px;
+  }
+}
+.market .market-content .coin-row span {
+  text-align: left;
+  align-items: center;
+  display: flex;
+  gap: 20px;
+}
+@media (max-width: 800px) {
+  .market .market-content .coin-row span {
+    width: 190px;
+  }
+}
+
+.chooseUs {
+  background-color: #0f051d;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.chooseUs .container h1 {
+  color: white;
+  font-size: 70px;
+  margin: 0;
+  margin-bottom: 50px;
+  font-weight: 700;
+  text-align: center;
+}
+.chooseUs .container h1 span {
+  background: linear-gradient(25deg, #2600fc, #ff00ea);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+.chooseUs .container .content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+@media (max-width: 767px) {
+  .chooseUs .container .content {
+    flex-wrap: wrap;
+  }
+}
+.chooseUs .container .content .boxContainer {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.chooseUs .container .content .boxContainer .box {
+  background-color: rgba(255, 255, 255, 0.05);
+  display: flex;
+  width: 100%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(130, 130, 130, 0.25);
+  border-image: initial;
+  border-radius: 25px;
+  gap: 30px;
+  padding: 20px;
+}
+.chooseUs .container .content .boxContainer .box h2 {
+  margin: 0;
+}
+.chooseUs .container .content .boxContainer .box .icon {
+  align-items: center;
+  display: flex;
+  height: 30px;
+  width: 30px;
+  background: linear-gradient(25deg, rgb(38, 0, 252), rgb(255, 0, 234));
+  border-radius: 15px;
+  padding: 15px;
+}
+.chooseUs .container .content .image {
+  width: 342px;
+  height: 484px;
+}
+@media (max-width: 1200px) {
+  .chooseUs .container .content .image {
+    display: none;
+  }
+}
+
+.join {
+  background-color: #0f051d;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  color: white;
+  text-align: center;
+}
+.join .container {
+  position: relative;
+}
+.join .container .bitcoin {
+  position: absolute;
+  left: 15%;
+  transform: translateY(-295px);
+  animation: bouncing 3s infinite;
+}
+@media (max-width: 991px) {
+  .join .container .bitcoin {
+    display: none;
+  }
+}
+.join .container .ether {
+  position: absolute;
+  left: 77%;
+  transform: translateY(-295px);
+  animation: bouncing 3s infinite;
+}
+@media (max-width: 991px) {
+  .join .container .ether {
+    display: none;
+  }
+}
+.join .container h1 {
+  font-size: 100px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+@media (max-width: 767px) {
+  .join .container h1 {
+    font-size: 60px;
+  }
+}
+.join .container h1 span {
+  background: linear-gradient(25deg, #2600fc, #ff00ea);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+.join .container p {
+  font-size: 22px;
+  margin-bottom: 100px;
+}
+.join .container button {
+  color: rgb(243, 242, 244);
+  font-size: 22px;
+  font-weight: 600;
+  background: linear-gradient(25deg, rgb(38, 0, 252), rgb(255, 0, 234));
+  border: none;
+  border-radius: 30px;
+  padding: 20px 40px;
+  cursor: pointer;
+}
+
+footer {
+  background-color: #0f051d;
+  background-image: url(../../images/footer/footer-bg.png);
+  background-position: 50%;
+  background-size: cover;
+  height: 400px;
+  text-align: center;
+  color: white;
+}
+footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+footer .container .social {
+  margin-bottom: 20px;
+}
+footer .container .social .icon {
+  width: 50px;
+  height: 50px;
+  margin-right: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+footer .container .social .icon:hover {
+  color: #7700f6;
+}
+footer .container .privacy {
+  display: flex;
+  gap: 30px;
+}
+footer .container .privacy p {
+  font-size: 18px;
+  cursor: pointer;
+}
+footer .container .privacy p:hover {
+  background: linear-gradient(25deg, #2600fc, #ff00ea);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+/*# sourceMappingURL=styles.css.map */

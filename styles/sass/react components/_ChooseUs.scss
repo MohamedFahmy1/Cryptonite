@@ -1,0 +1,70 @@
+@use "../helpers/" as *;
+
+.chooseUs {
+  background-color: $section-color;
+  padding-top: $main-padding;
+  padding-bottom: $main-padding;
+  .container {
+    & h1 {
+      color: white;
+      font-size: 70px;
+      margin: 0;
+      margin-bottom: 50px;
+      font-weight: 700;
+      text-align: center;
+      & span {
+        @include specialColor;
+      }
+    }
+    & .content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      @include mobile {
+        flex-wrap: wrap;
+      }
+      & .boxContainer {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        & .box {
+          background-color: rgba(255, 255, 255, 0.05);
+          display: flex;
+          width: 100%;
+          border-width: 1px;
+          border-style: solid;
+          border-color: rgba(130, 130, 130, 0.25);
+          border-image: initial;
+          border-radius: 25px;
+          gap: 30px;
+          padding: 20px;
+          & h2 {
+            margin: 0;
+          }
+          & .icon {
+            align-items: center;
+            display: flex;
+            height: 30px;
+            width: 30px;
+            background: linear-gradient(
+              25deg,
+              rgb(38, 0, 252),
+              rgb(255, 0, 234)
+            );
+            border-radius: 15px;
+            padding: 15px;
+          }
+        }
+      }
+      & .image {
+        width: 342px;
+        height: 484px;
+        @include large-screen {
+          display: none;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+@use "../helpers" as *;
+button.scroll {
+  padding: 10px;
+  background-color: $main-color;
+  position: fixed;
+  bottom: 25px;
+  right: -50px;
+  border-radius: 4px;
+  border: none;
+  z-index: 9999;
+  cursor: pointer;
+  color: white;
+  font-size: 20px;
+  transition: 0.3s;
+  &.active {
+    right: 20px;
+  }
+}
