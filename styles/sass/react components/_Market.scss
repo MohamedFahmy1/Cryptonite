@@ -3,6 +3,9 @@
 .market {
   background-color: $section-color;
   padding: $main-padding 0;
+  @media (max-width: 400px) {
+    padding: 192px 0 100px;
+  }
   .market-content {
     display: flex;
     flex-direction: column;

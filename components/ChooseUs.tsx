@@ -20,14 +20,18 @@ const ChooseUs = () => {
         <div className="content">
           <div className="boxContainer">
             <div className="box">
-              <FontAwesomeIcon icon={faWallet} className="icon" />
+              <div className="iconHolder">
+                <FontAwesomeIcon icon={faWallet} className="icon" />
+              </div>
               <div className="text">
                 <h2>CONNECT YOUR WALLET</h2>
                 <p>Use Trust Wallet, Metamask or to connect to the app.</p>
               </div>
             </div>
             <div className="box">
-              <FontAwesomeIcon icon={faEthereum} className="icon" />
+              <div className="iconHolder">
+                <FontAwesomeIcon icon={faEthereum} className="icon" />
+              </div>
               <div className="text">
                 <h2>SELECT YOUR QUANTITY</h2>
                 <p>
@@ -36,7 +40,9 @@ const ChooseUs = () => {
               </div>
             </div>
             <div className="box">
-              <FontAwesomeIcon icon={faBolt} className="icon" />
+              <div className="iconHolder">
+                <FontAwesomeIcon icon={faBolt} className="icon" />
+              </div>
               <div className="text">
                 <h2>CONFIRM TRANSACTION</h2>
                 <p>Earn by selling your crypto on our marketplace.</p>
@@ -46,14 +52,18 @@ const ChooseUs = () => {
           <Image src={chooseUs} alt="Hand carrying bitcoin" className="image" />
           <div className="boxContainer">
             <div className="box">
-              <FontAwesomeIcon icon={faSatellite} className="icon" />
+              <div className="iconHolder">
+                <FontAwesomeIcon icon={faSatellite} className="icon" />
+              </div>
               <div className="text">
                 <h2>RECEIVE YOUR OWN NFTS</h2>
                 <p>Invest all your crypto at one place on one platform.</p>
               </div>
             </div>
             <div className="box">
-              <FontAwesomeIcon icon={faChessKing} className="icon" />
+              <div className="iconHolder">
+                <FontAwesomeIcon icon={faChessKing} className="icon" />
+              </div>
               <div className="text">
                 <h2>TAKE A MARKET TO SELL</h2>
                 <p>
@@ -62,7 +72,9 @@ const ChooseUs = () => {
               </div>
             </div>
             <div className="box">
-              <FontAwesomeIcon icon={faBitcoin} className="icon" />
+              <div className="iconHolder">
+                <FontAwesomeIcon icon={faBitcoin} className="icon" />
+              </div>
               <div className="text">
                 <h2>DRIVE YOUR COLLECTION</h2>
                 <p>We make it easy to Discover, Invest and manage.</p>
