@@ -5,9 +5,10 @@ import {
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import footerBg from "/images/footer/footer-bg.png";
 const Footer = () => {
   return (
-    <footer>
+    <footer style={{ backgroundImage: `url(${footerBg.src})` }}>
       <div className="container">
         <div className="social">
           <FontAwesomeIcon icon={faFacebook} className="icon" />
